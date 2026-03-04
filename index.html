@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiveCon | Premium Weather Intelligence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <header class="brand-header">
+            <div class="logo-area">
+                <span class="live-indicator"></span>
+                <h1 class="brand-name">LiveCon</h1>
+            </div>
+            <p class="tagline">Real-time Weather Intelligence</p>
+        </header>
+
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" id="city-input" placeholder="Search City (e.g. Peshawar)..." spellcheck="false">
+                <button id="search-btn">Analyze</button>
+                <button id="location-btn" title="Use Current Location">📍</button>
+            </div>
+        </section>
+
+        <main class="weather-display" id="weather-display">
+            <div class="current-weather">
+                <div class="details">
+                    <h2 id="city-name">Ready for Analysis</h2>
+                    <p>Temperature: <span id="temp">--</span>°C</p>
+                    <p>Wind Speed: <span id="wind">--</span> M/S</p>
+                    <p>Humidity: <span id="humidity">--</span>%</p>
+                </div>
+                <div class="icon-box">
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="Weather Icon" id="main-icon">
+                    <h4 id="description">Awaiting Input</h4>
+                </div>
+            </div>
+
+            <div class="forecast-section">
+                <h3>Extended 5-Day Forecast</h3>
+                <div class="forecast-cards" id="forecast-cards">
+                    <div class="card placeholder">
+                        <p>--</p>
+                        <div class="empty-icon"></div>
+                        <p>--°C</p>
+                    </div>
+                    <div class="card placeholder">
+                        <p>--</p>
+                        <div class="empty-icon"></div>
+                        <p>--°C</p>
+                    </div>
+                    <div class="card placeholder">
+                        <p>--</p>
+                        <div class="empty-icon"></div>
+                        <p>--°C</p>
+                    </div>
+                    <div class="card placeholder">
+                        <p>--</p>
+                        <div class="empty-icon"></div>
+                        <p>--°C</p>
+                    </div>
+                    <div class="card placeholder">
+                        <p>--</p>
+                        <div class="empty-icon"></div>
+                        <p>--°C</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="livecon-footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Recent Analysis</h3>
+            <ul id="history-list">
+                <li class="history-placeholder">No recent searches</li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>System Status</h3>
+            <div class="status-item">
+                <span class="status-dot"></span>
+                <p>API Connection: <span id="api-status">Stable</span></p>
+            </div>
+            <div class="status-item">
+                <span class="status-dot"></span>
+                <p>Region: Pakistan / Global</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 LiveCon Weather Intelligence</p>
+        <p>Developed by <span class="dev-name">Murad Ali </span></p>
+    </div>
+</footer>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
